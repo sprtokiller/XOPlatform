@@ -32,7 +32,7 @@
     }
 
     .board {
-        @apply max-w-full max-h-[83vh] aspect-square grid;
+        @apply max-w-[90vw] max-h-full md:max-w-full sm:max-h-[75vh] aspect-square grid;
         grid-template-columns: repeat(15, minmax(0, 1fr));
         background-image: url("../assets/img/board_background.svg");
         
