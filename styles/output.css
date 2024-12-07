@@ -599,7 +599,7 @@ button {
   max-width: 90vw;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .\!board {
     max-height: 75vh;
     max-width: 100%;
@@ -613,7 +613,7 @@ button {
   max-width: 90vw;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .board {
     max-height: 75vh;
     max-width: 100%;
