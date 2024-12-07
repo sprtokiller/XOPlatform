@@ -37,8 +37,8 @@
             </div>
             <p text="gameMenuButton" onclick="endGame()" class="text-2xl cursor-pointer">Menu</p>
         </header>
-        <div class="flex gap-7 flex-grow w-full mt-8">
-            <div class="flex-grow ml-7">
+        <div class="flex flex-grow w-full mt-8">
+            <div class="flex justify-center flex-grow">
                 <div class="board relative">
                     <div id="win-popup-x" class="win-popup absolute items-center justify-center hidden size-full bg-[radial-gradient(closest-side,_var(--tw-gradient-stops))] from-blue/40 to-blue/0">
                         <div class="relative px-5 py-8 text-center bg-white rounded-md win-back win-back-x">
@@ -76,15 +76,7 @@
                     <!-- Board will generate here -->
                 </div>
             </div>
-            <div class="w-44 min-w-44 mr-7">
-                <h1 text="gameCTATitle" class="text-xl text-blue font-bold">Vyhráváš? Tak nám to přijď předvést na pIšQworky!</h1>
-                <br>
-                <p text="gameCTADescription" class="text-black text-base">Letos už po <span id="xo-year"></span>. organizujeme mistrovství škol Česka a Slovenska v této logické hře. Přihlásit se můžeš společně se svým týmem, nebo bojovat sám za sebe v kategorii jednotlivců.</p>
-                <br>
-                <p text="gameCTAText" class="text-black text-base font-bold">Chceš vědět víc? Koukni na náš web <span class="highlight" onclick="toggleXOIframe()">pisqworky.cz</span>, budeme se těšit.</p>
-            </div>
         </div>
-        <img text="gameQRImageSrc" src="assets/img/cs/qr_code_dark.svg" class="absolute right-0 bottom-0 mr-7 mb-[2.95rem] size-44">
     </div>
     <div class="xoIframe hidden absolute top-0 z-10 items-center justify-center min-w-[100dvw] min-h-[100dvh] bg-black/40">
         <div class="relative w-[93%]">
