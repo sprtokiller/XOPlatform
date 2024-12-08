@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pIšQworky - Review</title>
+    <link rel="stylesheet" href="styles/output.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <script defer src="config.js"></script>
+    <script defer src="script/lang.js"></script>
+    <script defer src="script/review.js"></script>
+</head>
+<body class="overflow-hidden">
+    <!-- REVIEW MENU -->
+    <div id="review-menu" class="center min-h-[100dvh] bg-blue" style="overflow:auto;">
+        <div class="center gap-20 w-full px-5" style="margin-top: 5rem;">
+            <!-- Scrollable list container -->
+            <div class="center flex-col gap-5 w-full max-w-[400px] max-h-[40vh] overflow-auto bg-white rounded-lg" style="padding: 1rem;">
+                <p class="text-blue font-bold text-xl">Poslední hry:</p>
+                <div id="games-list" class="flex flex-col w-full" style="gap: 2px"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REVIEW GAME (final board) -->
+    <div id="review-game" class="hidden min-h-[100dvh] flex-col" style="overflow:hidden; position:relative;">
+        <header class="flex justify-between items-center h-24 px-12 py-5 bg-blue">
+            <div class="flex items-center gap-10 h-full">
+                <img src="assets/img/logo.svg" class="h-[60%]">
+                <img src="assets/img/amos.svg" class="h-[60%]">
+            </div>
+            <p text="gameMenuButton" onclick="showReviewMenu()" class="text-2xl cursor-pointer" style="color:white;">Menu</p>
+        </header>
+        <div class="flex flex-grow w-full flex-col items-center" style="position:relative;">
+            <div class="flex justify-center flex-grow w-full">
+                <!-- Make the board smaller with inline styles -->
+                <div class="board relative" id="review-board" style="max-height:70vh; height:70vh; aspect-ratio:1; margin:auto; margin-top: 1rem;"></div>
+    
+            </div>
+            <p id="review-winner" class="text-2xl mt-5 mb-8 text-center"></p>
+        </div>
+
+        <!-- Controls fixed at the bottom -->
+        <div style="position:fixed; bottom:10px; left:50%; transform:translateX(-50%); background:white; padding:10px; border-radius:5px; box-shadow:0 0 10px rgba(0,0,0,0.3); display:flex; gap:10px; align-items:center; z-index:999;">
+            <button onclick="goToStart()" style="width: 8rem; padding:8px 16px; background:#eee; border:none; border-radius:5px; cursor:pointer;">Začátek</button>
+            <button onclick="stepBackward()" style="width: 8rem; padding:8px 16px; background:#eee; border:none; border-radius:5px; cursor:pointer;">← Zpět</button>
+            <button id="play-pause-btn" onclick="togglePlay()" style="width: 8rem; padding:8px 16px; background:#eee; border:none; border-radius:5px; cursor:pointer;">Přehrát</button>
+            <button onclick="stepForward()" style="width: 8rem; padding:8px 16px; background:#eee; border:none; border-radius:5px; cursor:pointer;">Vpřed →</button>
+            <button onclick="goToEnd()" style="width: 8rem; padding:8px 16px; background:#eee; border:none; border-radius:5px; cursor:pointer;">Konec</button>
+            <span id="move-counter" style="width: 8rem; font-size:1rem; font-weight:bold;"></span>
+        </div>
+    </div>
+</body>
+</html>
